@@ -1,6 +1,6 @@
 # BDL-experiments
 
-This repository contains the nextflow run configurations for all experiments run for presentation in the Bayesia Deep Learning textbook.
+This repository contains the nextflow run configurations for all experiments run for presentation in the Bayesian Deep Learning textbook.
 
 ## Overview
 There are two main steps to this workflow. The first is to run the `TUNE_BETA` subworkflow in order to pick the best value of &beta; for imputation using the &beta;-VAEs worflow. This will create a set of plots that can be assessed by the user to pick the optimal value of &beta; that balances empirical coverage (EC) and mean absolute error (MAE). The second is to run multiple imputation using this chosen value of &beta; to impute M datasets that will then be assessed for coverage via EC, accuracy via MAE and impact on downstream differential gene expression results using LASSO regression. In parallel, single imputation using VAEs will also be run, as well as mean imputation to benchmark our results against.
